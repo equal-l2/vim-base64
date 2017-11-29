@@ -3,6 +3,8 @@
 Encodes/Decodes visually selected strings to/from base64 strings.  
 Heavily inspired by [christianrondeau/vim-base64](https://github.com/christianrondeau/vim-base64).  
 
+[![asciicast](https://asciinema.org/a/150191.png)](https://asciinema.org/a/150191)
+
 ## Installation
 Use your favorite plugin manager.  
 
