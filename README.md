@@ -3,7 +3,16 @@
 Encodes/Decodes visually selected strings to/from base64 strings.  
 Heavily inspired by [christianrondeau/vim-base64](https://github.com/christianrondeau/vim-base64).  
 
+## Installation
+Use your favorite plugin manager.  
+
+## Usage
+In visual mode:  
+- `<leader>atob` to convert a string to base64 string.
+- `<leader>btoa` to convert a base64 string to original string.
+
 ## Differences from christianrondeau/vim-base64
 - Using pure-VimScript base64 implementation by [vim-jp/vital.vim](https://github.com/vim-jp/vital.vim)
 - No support for regex currently
 - Keeping content of register `"`
+- Improved error handling
