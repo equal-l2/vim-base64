@@ -9,18 +9,18 @@ function! base64#decode(data)
 endfunction
 
 function! base64#encode_and_substitute()
-  let l:tmp=@"
+  let l:tmp = @"
   normal! gvy
-  let @"=substitute(@",'\n$','','')
+  let @" = substitute(@",'\n$','','')
   execute 'normal! gv"_c' . base64#encode(@")
-  let @"=l:tmp
+  let @" = l:tmp
   normal! `[v`]h
 endfunction
 
 function! base64#decode_and_substitute()
-  let l:tmp=@"
+  let l:tmp = @"
   normal! gvy
-  let @"=substitute(@",'\n$','','')
+  let @" = substitute(@",'\n$','','')
   try
     execute 'normal! gv"_c' . base64#decode(@")
     normal! `[v`]h
@@ -28,6 +28,6 @@ function! base64#decode_and_substitute()
     normal! `[v`]
     echoerr 'Error: Invalid Base64 string'
   finally
-    let @"=l:tmp
+    let @" = l:tmp
   endtry
 endfunction
