@@ -20,6 +20,7 @@ endfunction
 function! base64#decode_and_substitute()
   let l:tmp=@"
   normal! gvy
+  let @"=substitute(@",'\n$','','')
   try
     execute 'normal! gv"_c' . base64#decode(@")
     normal! `[v`]h
