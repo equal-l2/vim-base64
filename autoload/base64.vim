@@ -26,7 +26,7 @@ function! base64#decode_and_substitute()
     normal! `[v`]h
   catch
     normal! `[v`]
-    echo 'Error: Invalid Base64 string'
+    echoerr 'Error: Invalid Base64 string'
   finally
     let @"=l:tmp
   endtry
