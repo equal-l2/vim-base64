@@ -11,6 +11,7 @@ endfunction
 function! base64#encode_and_substitute()
   let l:tmp=@"
   execute 'normal! gvy'
+  let @"=substitute(@",'\n$','','')
   execute 'normal! gv"_c' . base64#encode(@")
   let @"=l:tmp
   execute 'normal! `[v`]h'
